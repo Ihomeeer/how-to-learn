@@ -9,13 +9,13 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-section {
-  /* border: 1px solid red; */
+/* section {
+  border: 1px solid red;
 }
 
 div {
-  /* border: 1px solid blue; */
-}
+  border: 1px solid blue;
+} */
 
 .header {
   position: relative;
@@ -47,8 +47,9 @@ div {
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
   z-index: 100;
-  /* border: 1px solid red; */
 }
 
 .header__subtitle {
@@ -59,15 +60,13 @@ div {
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
   z-index: 100;
-  /* border: 1px solid red; */
-}
-
-.link {
-  color: #2f80ed;
 }
 
 .header__link {
+  color: #2f80ed;
   text-decoration: none;
 }
 
@@ -75,8 +74,8 @@ div {
   width: 765px;
   height: 608px;
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
   z-index: 1;
 }
 
@@ -85,7 +84,7 @@ div {
   height: 568px;
   position: absolute;
   top: 64px;
-  right: 0px;
+  right: 0;
   background-color: #2f80ed;
   z-index: 0;
 }
@@ -104,7 +103,7 @@ div {
 
 .two-columns__brief {
   display: flex;
-  margin: 0px;
+  margin: 0;
   width: 175px;
   color: #2f80ed;
   line-height: 1.2;
@@ -123,11 +122,14 @@ div {
 }
 
  .two-columns__paragraph {
-  margin: 0px 0px 30px 0px;
+  margin: 0 0 30px 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+}
 
+.two-columns__paragraph:last-child {
+  margin-bottom: 0;
 }
 
 .two-columns__span-accent {
@@ -137,7 +139,7 @@ div {
 }
 
 .digits {
-  margin: 100px 0px;
+  margin: 100px 0;
 }
 
 .section-title {
@@ -152,7 +154,7 @@ div {
 .section-subtitle {
   width: 60%;
   text-align: center;
-  margin: 20px auto 0px auto;
+  margin: 20px auto 0 auto;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
@@ -165,6 +167,7 @@ div {
   justify-content: space-between;
   width: 1100px;
   margin: 0 auto;
+  list-style: none;
   /* border: 2px dashed cyan; */
 }
 
@@ -185,19 +188,21 @@ div {
   font-size: 18px;
   font-weight: normal;
   margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .feynman {
   position: relative;
-  height: 790px;
+  min-height: 790px;
   background: url(../images/feynman.png) left bottom no-repeat;
   background-size: 867px 637px;
   background-color: #f2f2f2;
+  padding-top: 100px;
 }
 
 .feynman__title {
   width: 648px;
-  margin: 100px auto 70px auto;
+  margin: 0 auto 70px auto;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
@@ -205,7 +210,7 @@ div {
 }
 
 .feynman__subtitle {
-  margin: 0px auto;
+  margin: 0 auto;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -224,17 +229,20 @@ div {
 }
 
 .kaufman {
-  background-color: #000000;
+  background-color: #1f1f1f;
   overflow: hidden;
   position: relative;
-  z-index: -2;
+  z-index: 1;
 }
 
-.triangle {
+.kaufman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
+  background-position: center;
+  background-size: 877px 877px;
   width: 877px;
   height: 877px;
   position: absolute;
-  top: 0px;
+  top: 0;
   right: -210px;
   z-index: -1;
 }
@@ -262,14 +270,14 @@ div {
 .footer {
   display: flex;
   min-height: 350px;
-  background-color: #000000;
+  background-color: #1f1f1f;
   color: white;
   justify-content: center;
 }
 
 .footer__columns {
   width: 90%;
-  margin: 60px 0px 40px;
+  margin: 60px 0 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -285,13 +293,13 @@ div {
 .logo_place_footer {
   height: 35px;
   display: flex;
-  margin: 0px;
+  margin: 0;
   background-image: url(../images/logo_place_footer.svg);
   z-index: 100;
 }
 
 .footer__author {
-  margin: 18px 0px;
+  margin: 18px 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
@@ -301,13 +309,14 @@ div {
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
 .footer__column-links {
   list-style: none;
   padding: 0;
-  margin: 0px auto 16px;
+  margin: 0 auto 16px;
 }
 
 .footer__column-link {
@@ -325,6 +334,8 @@ div {
   /* border: 1px solid white; */
 }
 
-.footer__social_icon {
+.footer__social-icon {
   margin-right: 10px;
+  width: 16px;
+  height: 16px;
 }
